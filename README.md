@@ -1,30 +1,41 @@
-# Northguard
+# Northguard Materieel B.V. — Website
 
-Meertalige website (NL / EN / TR) voor Northguard — bouw & constructie.
+Meertalige (NL / EN / TR) bedrijfswebsite voor **Northguard Materieel B.V.**
+Dutch Engineering · European Manufacturing · Industrial Material Handling Solutions.
 
 ## Structuur
 
 ```
 northguard/
-├── index.html        # Complete one-page site met taalswitcher
+├── index.html          # Home
+├── producten.html      # Producten (FlatWagon, HandWagon, SteelPallet, AutoRack, opslagrekken, maatwerk)
+├── diensten.html       # Industriële dienstverlening (isolatie, fireproofing, betonwerk)
+├── over-ons.html       # Over ons / Engineering & Manufacturing
+├── media.html          # Video's + fotogalerij
+├── contact.html        # Contact + formulier
 ├── assets/
-│   └── logo.png      # Logo (N-schild)
+│   ├── logo-ng.png     # Logo (transparant)
+│   ├── favicon.png
+│   ├── img/            # Geoptimaliseerde foto's
+│   └── video/          # 3 video's + posterframes
 └── README.md
 ```
 
-## Lokaal bekijken
+De logo is als transparante afbeelding **direct in elke pagina ingesloten**, zodat hij altijd laadt — ook los geopend of in een preview.
 
-Open `index.html` in je browser. Klik rechtsboven op **NL / EN / TR** om van taal te wisselen.
+## Bekijken
+
+Open `index.html` in je browser. De taalkeuze (NL / EN / TR, rechtsboven) wordt onthouden tussen pagina's. De navigatie is gecentreerd met losse pagina's per tab.
 
 ## Naar GitHub pushen
 
-De repo `northguard` (owner `yciftci111`) maak je aan zoals in je screenshot. Daarna:
+Repo `northguard` (owner `yciftci111`) is aangemaakt. Daarna:
 
 ```bash
 cd northguard
 git init
 git add .
-git commit -m "Initial commit: Northguard website"
+git commit -m "Northguard website (NL/EN/TR)"
 git branch -M main
 git remote add origin https://github.com/yciftci111/northguard.git
 git push -u origin main
@@ -32,19 +43,17 @@ git push -u origin main
 
 ## Gratis online zetten (GitHub Pages)
 
-1. Ga in de repo naar **Settings → Pages**.
-2. Bij *Source* kies **Branch: main** en map **/(root)**.
-3. Opslaan. Na ~1 minuut staat de site op `https://yciftci111.github.io/northguard/`.
+Repo → **Settings → Pages** → Source: **Branch main / (root)** → Save.
+Na ~1 minuut live op `https://yciftci111.github.io/northguard/`.
 
-## Nog aanpassen
+## Inhoud & aandachtspunten
 
-Placeholders die je nog wilt invullen staan in `index.html`:
+- **Contact:** mobiel +31 (0)6 444 50 245 · info@northguard.nl · Nederland (HQ) · Productie: Kayseri Free Zone, Türkiye.
+- **Producten** gebruiken de aangeleverde praktijkfoto's. Voor **NG AutoRack System** zijn geen CAD-beelden aangeleverd — daar staat "CAD-beelden op aanvraag"; lever je ze aan, dan plaats ik ze.
+- Er zijn geen technische specificaties verzonnen: overal staat "Technische specificaties op aanvraag".
+- Alle teksten (3 talen) staan gebundeld in het `T`-object onderaan elke pagina. Wil je 1 centrale vertaalbron? Dan splits ik het naar `assets/i18n.js`.
+- Het contactformulier toont nu een bevestiging via JavaScript. Voor echt versturen koppel je [Formspree](https://formspree.io) of Netlify Forms (form `action` aanpassen).
 
-- Telefoon: `+31 (0)10 000 00 00`
-- E-mail: `info@northguard.nl`
-- Adres: `Rotterdam, Nederland`
-- Statistieken (15+ jaar, 250+ projecten) en teksten in Over ons.
+## Accentkleur
 
-Alle vertaalteksten staan gebundeld in het `TR`-object onderaan `index.html` — pas ze daar aan voor alle drie de talen.
-
-Het contactformulier toont nu een bevestiging via JavaScript. Voor echt versturen koppel je een dienst als [Formspree](https://formspree.io) of [Netlify Forms](https://docs.netlify.com/forms/setup/).
+De site gebruikt het **oranje/antraciet** uit het logo. In de merkbeschrijving werd ook een groen accent genoemd; wil je de site naar groen? Dat is één variabele (`--orange` in de `<style>`) — laat het weten en ik zet het om.
